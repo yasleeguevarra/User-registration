@@ -16,3 +16,9 @@ def  register_user(request):
         return Response(serializer.data, status=status.HTTP_201_CREATED)
     return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
+@api_view(['GET'])
+def list_user(request):
+    users = UserRegistration.objects.all()
+    serializer = RegistrationSerializer(users, many=True)
+    return Response(serializer.data, status=status.HTTP_200_OK)
+

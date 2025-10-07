@@ -9,12 +9,18 @@ export default function Homepage({navigation}) {
             <Text style={Styles.headerText}>Homepage!</Text> 
 
     
-            <View style={Styles.buttonWrapper}> 
+            <View style={Styles.button}> 
                 <Button
                     title="Register"
-                    onPress={() => navigation.navigate('Register')}
-                />
+                    onPress={() => navigation.navigate('Register')}/>
             </View>
+
+            <View style={Styles.button}>
+                <Button
+                    title="View User"
+                    onPress={() => navigation.navigate('UserList')}/>
+            </View>
+
         </View>
     );
     
