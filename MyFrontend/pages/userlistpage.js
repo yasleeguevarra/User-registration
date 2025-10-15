@@ -4,7 +4,7 @@ import {useState, useEffect} from "react";
 import Styles from '../styles.js';
 import { Button } from "react-native-web";
 
-export default function userlistpage({navigation}) {
+export default function EditUserPage({navigation}) {
     const [users, setUsers] = useState([]);
 
     useEffect(() => {
