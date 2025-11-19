@@ -27,6 +27,9 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['http://127.0.0.1:8000/','127.0.0.1:8000','127.0.0.1','http://192.168.30.237']
 
+CSRF_TRUSTED_ORIGINS = ['http://127.0.0.1:8000/']
+
+
 # Application definition
 
 INSTALLED_APPS = [
@@ -59,7 +62,7 @@ ROOT_URLCONF = 'OurProject.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [BASE_DIR / "OurProject" / "templates"],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
